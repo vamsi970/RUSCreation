@@ -1,0 +1,200 @@
+/* =============================================
+   ABOUT.CSS — About page specific styles
+   ============================================= */
+
+/* FOUNDER */
+.founder-section {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 64px;
+  padding: 100px 80px;
+  background: var(--white);
+  align-items: center;
+}
+.founder-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+.founder-quote-mark {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 4rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: -8px;
+}
+.founder-content blockquote {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.75;
+  margin: 0 0 28px;
+}
+.founder-name h3 {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.founder-name span {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+@media (max-width: 1024px) {
+  .founder-section { grid-template-columns: 1fr; padding: 60px 40px; gap: 32px; }
+  .founder-image img { height: 380px; }
+}
+@media (max-width: 768px) {
+  .founder-section { padding: 40px 24px; }
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 100px 80px;
+  align-items: center;
+}
+.story-text h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+.story-text p {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+.story-image {
+  position: relative;
+}
+.story-image img {
+  height: 520px;
+  object-fit: cover;
+}
+.story-tag {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  background: var(--gold);
+  color: var(--dark);
+  font-family: var(--ff-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 20px 28px;
+}
+
+/* VALUES */
+.values-section {
+  background: var(--dark);
+  padding: 100px 80px;
+}
+.section-header.center { text-align: center; margin-bottom: 60px; }
+.section-header.center h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 300;
+  color: var(--white);
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  background: transparent;
+}
+.value-card {
+  background: var(--dark-2);
+  padding: 48px 32px;
+  transition: background 0.3s, transform 0.3s;
+}
+.value-card:hover {
+  background: #3a2a18;
+  transform: translateY(-4px);
+}
+.value-icon {
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+}
+.value-card h3 {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.value-card p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+}
+
+/* WHY US */
+.why-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: var(--cream);
+}
+.why-image img {
+  height: 600px;
+  object-fit: cover;
+}
+.why-text {
+  padding: 80px;
+}
+.why-text h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.why-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--cream-2);
+}
+.why-list li span {
+  color: var(--gold);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+@media (max-width: 1024px) {
+  .about-story { grid-template-columns: 1fr; padding: 60px 40px; gap: 48px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .values-section { padding: 60px 40px; }
+  .why-section { grid-template-columns: 1fr; }
+  .why-image img { height: 360px; }
+  .why-text { padding: 60px 40px; }
+}
+@media (max-width: 768px) {
+  .about-story { padding: 40px 24px; }
+  .values-section { padding: 50px 24px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .why-text { padding: 40px 24px; }
+  .story-tag { right: 0; bottom: -16px; }
+}

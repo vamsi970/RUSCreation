@@ -1,0 +1,122 @@
+/* techniques.css */
+
+.process-section {
+  padding: 100px 80px;
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: start;
+}
+.process-intro h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.process-intro p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.process-step {
+  display: flex;
+  gap: 28px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--cream-2);
+  transition: background 0.3s;
+}
+.process-step:first-child { padding-top: 0; }
+.step-num {
+  font-family: var(--ff-display);
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  min-width: 52px;
+  flex-shrink: 0;
+}
+.step-body h3 {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.step-body p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-light);
+}
+
+/* TECH GRID */
+.techniques-grid-section {
+  background: var(--dark);
+  padding: 80px 80px 100px;
+}
+.section-header {
+  margin-bottom: 48px;
+}
+.section-header h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 300;
+  color: var(--white);
+}
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  background: rgba(255,255,255,0.05);
+}
+.tech-card {
+  background: var(--dark-2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s;
+}
+.tech-card:hover { background: #2e2010; }
+.tech-img {
+  height: 260px;
+  overflow: hidden;
+}
+.tech-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.tech-card:hover .tech-img img { transform: scale(1.05); }
+.tech-info {
+  padding: 32px;
+}
+.tech-info h3 {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.tech-info p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+}
+
+@media (max-width: 1024px) {
+  .process-section { grid-template-columns: 1fr; padding: 60px 40px; gap: 48px; }
+  .techniques-grid-section { padding: 60px 40px; }
+  .tech-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .process-section { padding: 40px 24px; }
+  .techniques-grid-section { padding: 50px 24px; }
+}
