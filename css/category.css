@@ -1,0 +1,111 @@
+/* =============================================
+   CATEGORY.CSS — single product category page
+   ============================================= */
+
+.category-section {
+  padding: 60px 80px 100px;
+  background: var(--cream);
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  transition: color 0.3s;
+}
+.back-link:hover { color: var(--gold); }
+
+.category-intro {
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+.category-intro h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.category-intro p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+
+.category-grid {
+  column-count: 3;
+  column-gap: 20px;
+}
+.category-photo {
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+  background: var(--white);
+  cursor: zoom-in;
+  break-inside: avoid;
+  overflow: hidden;
+}
+.category-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.category-photo:hover img { transform: scale(1.04); }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 13, 5, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 88vw;
+  max-height: 86vh;
+  object-fit: contain;
+  background: var(--white);
+}
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  color: var(--white);
+  font-size: 3.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 20px;
+}
+.lightbox-prev { left: 12px; }
+.lightbox-next { right: 12px; }
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: 0;
+  color: var(--white);
+  font-size: 2.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .category-section { padding: 48px 40px 80px; }
+  .category-grid { column-count: 2; }
+}
+@media (max-width: 768px) {
+  .category-section { padding: 40px 24px 60px; }
+  .category-grid { column-count: 1; }
+}

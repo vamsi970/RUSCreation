@@ -15,6 +15,7 @@
 }
 
 .category-showcase {
+  position: relative;
   background: var(--white);
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -64,6 +65,12 @@
 }
 .showcase-info .text-link {
   font-size: 0.75rem;
+}
+/* stretch the link over the whole card so the image and title are clickable too */
+.showcase-info .text-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
 }
 
 /* CTA BAND */

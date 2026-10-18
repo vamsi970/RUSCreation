@@ -2,6 +2,11 @@
    SHOWROOM.CSS — Our Virtual Showroom page
    ============================================= */
 
+/* Hero photo is a tall portrait shot; anchor the crop on the wooden plates and bowls. */
+.page-hero-bg {
+  background-position: center 32%;
+}
+
 .showroom-intro {
   max-width: 780px;
   margin: 0 auto;
@@ -22,10 +27,48 @@
   color: var(--text-light);
 }
 
+/* FAIR ANNOUNCEMENT */
+.fair-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 64px;
+  padding: 100px 80px;
+  align-items: center;
+  background: var(--white);
+}
+.fair-image img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+.fair-content h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+.fair-content p {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+.fair-content strong {
+  color: var(--text);
+}
+.fair-content .btn-primary {
+  margin-top: 12px;
+  display: inline-block;
+}
+
 /* GALLERY */
 .showroom-gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 60px 80px 100px;
 }
@@ -108,6 +151,7 @@
   .showroom-map-section { grid-template-columns: 1fr; }
   .map-embed { height: 360px; }
   .map-info { padding: 60px 40px; }
+  .fair-section { grid-template-columns: 1fr; padding: 60px 40px; gap: 32px; }
 }
 @media (max-width: 768px) {
   .showroom-intro { padding: 60px 24px 10px; }
@@ -115,4 +159,5 @@
   .gallery-item img { height: 320px; }
   .map-info { padding: 48px 24px; }
   .cta-band { padding: 60px 24px; }
+  .fair-section { padding: 48px 24px; }
 }

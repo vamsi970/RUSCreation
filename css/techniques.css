@@ -1,5 +1,9 @@
 /* techniques.css */
 
+.page-hero-bg {
+  background-position: center;
+}
+
 .process-section {
   padding: 100px 80px;
   background: var(--cream);
