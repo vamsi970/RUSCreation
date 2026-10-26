@@ -71,6 +71,17 @@ ul { list-style: none; }
   font-family: var(--ff-body);
   font-weight: 500;
 }
+.nav-logo a { display: block; }
+.nav-logo img {
+  display: block;
+  height: 68px;
+  width: 68px;
+  object-fit: contain;
+}
+.footer-brand .nav-logo img {
+  height: 100px;
+  width: 100px;
+}
 .logo-letter {
   font-size: 2.4rem;
 }
@@ -81,7 +92,7 @@ ul { list-style: none; }
 }
 .nav-links a {
   font-family: var(--ff-body);
-  font-size: 0.72rem;
+  font-size: calc(0.72rem + 2px);
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;

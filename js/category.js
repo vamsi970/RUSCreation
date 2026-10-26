@@ -112,7 +112,7 @@ const CATEGORIES = {
     ]
   },
   "home-accessories-pet": {
-    "title": "Home Accessories & Pet",
+    "title": "Wall Art, Pet & Home Accessories",
     "desc": "Wall art, bags and pet essentials that add character to any living space.",
     "images": [
       "Images/Product Images/Home Acessories & Pet/Pet Bed.jpg",
@@ -124,7 +124,7 @@ const CATEGORIES = {
     ]
   },
   "sustainable-wood": {
-    "title": "Sustainable Wood",
+    "title": "Wood & Décor",
     "desc": "Eco-friendly wooden servingware and decor crafted from responsibly sourced timber.",
     "images": [
       "Images/Product Images/Suistanable wood/12.png",
